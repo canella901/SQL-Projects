@@ -1,0 +1,6 @@
+SELECT cd.bookings.starttime AS start_time, cd.members.firstname AS first_name, cd.members.surname AS last_name
+FROM cd.bookings
+INNER JOIN cd.members
+ON cd.bookings.memid = cd.members.memid
+WHERE cd.members.firstname IN ('David') AND cd.members.surname IN ('Farrell')
+
